@@ -46,5 +46,8 @@ def logout_user(request):
 	messages.success(request, ("You were logged out!"))
 	return redirect('home')
 
+def user_page(request):
+	return render(request, 'authenticate/user.html', {})
+
 def settings(request):
 	return render(request, 'authenticate/settings.html', {})
