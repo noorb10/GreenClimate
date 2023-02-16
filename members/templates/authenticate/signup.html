@@ -1,0 +1,60 @@
+{% extends 'projectWeb/base.html' %}
+{% load static %}
+
+{% block authStyle %}
+    <link rel="stylesheet" href="{% static 'projectWeb/css/auth.css' %}">
+{% endblock%}
+
+{% block content %}
+    <!-- SIGNUP-->
+    <div class="wrapper">
+        <h1>Sign Up</h1>
+        <form action="{% url 'signup' %}" method="POST">
+            {% csrf_token %}
+            {{form.username}}
+            {{form.email}}
+            {{form.password1}}
+            {{form.password2}}
+            <div class="terms">
+                <span>
+                    <input type="checkbox" id="checkbox">
+                </span>
+                <label for="checkbox"> I agree to <a href="#">Terms & Conditions</a></label>
+            </div>
+            <button class="form-button" type="submit" name="">Sign Up</button>
+        </form>
+        {% if form.errors %}
+            <div class="alert alert-danger">
+                <strong>Error:</strong>
+                {% for field, errors in form.errors.items %}
+                <p>{{ field|title }}:</p>
+                <ul>
+                    {% for error in errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="member">Already have an account? <a href="{% url 'login' %}">Login</a>
+        </div>
+    </div>
+    <!-- /SIGNUP-->
+    <script>
+    //Query All input fields
+    var form_fields = document.querySelectorAll('#id_username, #id_email, #id_password1, #id_password2');
+    form_fields[0].placeholder='Username';
+    form_fields[1].placeholder='Email';
+    form_fields[2].placeholder='Enter password';
+    form_fields[3].placeholder='Re-enter Password';
+    for (var field in form_fields){	
+    form_fields[field].className += ' form-control'
+    }
+    </script>
+    
+{% endblock %}
+
+
+
+
+      

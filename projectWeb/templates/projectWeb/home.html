@@ -1,0 +1,112 @@
+{% extends 'projectWeb/base.html' %}
+{% load static %}
+<!-- {% block button %}
+    <a class="btn btn-outline-success ms-lg-3" href="{% url 'login' %}" role="button">Login</a>
+{% endblock %} -->
+{% block content %}
+    <!-- HERO -->
+    <div class="hero vh-100 d-flex align-items-center" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mx-auto text-center">
+                    <h1 class="display-4 text-white">Climate Change; <br> Beyond a Catastrophe</h1>
+                    <p class="text-white my-3">As greenhouse gas emissions blanket the Earth, they trap the sun's heat. <br>
+                        This leads to the global warming that causes climate change. <br> The world is warming faster than ever in recorded history.</p>
+                        <a href="home.html#actNow" class="btn btn-success ">Act Now</a>
+                        <a href="home.html#solutions" class="btn me-2 btn-outline-success">Explore Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /HERO -->
+    <!-- SOLUTIONS -->
+    <section id="solutions">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-8 mx-auto text-center">
+            <h6 class="text-success">SOLUTIONS</h6>
+            <h1>Solutions to Reverse Climate Change</h1>
+            <p>Everyone can help limit climate change. From the way we travel, to the electricity we use, the food we eat, and the things we buy, we can make a difference. To preserve a livable climate, the average emissions per person per year will need to drop to around 2 to 2.5 tons of CO2e by 2030. Start with these ten actions to help tackle the climate crisis.</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+           <a href="#" class="solution card-effect" >
+            <div class="iconbox"><img src="{% static 'projectWeb/images/Untitled.png' %}" alt="icon"></div>
+            <h5 class="mt-4 md-2">Save energy at home</h5>
+           </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <a href="#" class="solution card-effect">
+              <div class="iconbox"><img src="{% static 'projectWeb/images/image.png' %}" alt="icon"></div>
+              <h5 class="mt-4 md-2">Walk, bike, or take public transport</h5>
+            </a>   
+          </div>
+          <!-- <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <a href="#" class="solution card-effect">
+              <div class="iconbox"><img src="{% static 'projectWeb/images/image (1).png' %}" alt="icon"></div>
+              <h5 class="mt-4 md-2">Eat more vegetables</h5>
+            </a>  
+          </div> -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <a href="#" class="solution card-effect">
+              <div class="iconbox"><img src="{% static 'projectWeb/images/image (2).png' %}" alt="icon"></div>
+              <h5 class="mt-4 md-2">Consider your travel</h5>
+            </a>  
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3  mx-auto">
+            <a href="#" class="solution card-effect">
+              <div class="iconbox"><img src="{% static 'projectWeb/images/image (3).png' %}" alt="icon"></div>
+              <h5 class="mt-4 md-2">Throw away less food</h5>
+            </a>  
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <a href="#" class="solution card-effect">
+              <div class="iconbox"><img src="{% static 'projectWeb/images/image (4).png' %}" alt="icon"></div>
+              <h5 class="mt-4 md-2">Reduce, reuse, repair & recycle</h5>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <a href="#" class="solution card-effect">
+              <div class="iconbox"><img src="{% static 'projectWeb/images/image (5).png' %}" alt="icon"></div>
+              <h5 class="mt-4 md-2">Change your home's source of energy</h5>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <a href="#" class="solution card-effect">
+              <div class="iconbox"><img src="{% static 'projectWeb/images/image (6).png' %}" alt="icon"></div>
+              <h5 class="mt-4 md-2">Switch to an electric vehicle</h5>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+          <a href="#" class="solution card-effect">
+            <div class="iconbox"><img src="{% static 'projectWeb/images/image(7).png' %}" alt="icon"></div>
+           <h5 class="mt-4 md-2">Make your money count</h5>
+          </a>
+          </div>
+          <!-- <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+          <a href="#" class="solution card-effect">
+            <div class="iconbox"><img src="{% static 'projectWeb/images/image (8).png' %}" alt="icon"></div>
+            <h5 class="mt-4 md-2">Speak up</h5>
+          </a>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- /SOLUTIONS -->
+    <!-- ACTNOW -->
+    <div class="actNow vh-100 d-flex align-items-center" id="actNow">
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <h6 class="text-white">ACT NOW</h6>
+              <h1 class="display-4 text-white">Don't wait another decade to save the planet. Act Now!</h1>
+              <p class="text-white my-1">The Earth lost 1.2 million pounds of ice this year. <br>The climate is changing and so should we!</p>
+           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /ACTNOW -->
+{% endblock %}

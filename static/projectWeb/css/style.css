@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap'); /* Roboto Font */
+
+:root {
+    --success: #0fd33a;
+    --dark: #2d522d;
+    --body: rgb(110, 153, 126);
+    --box-shadow: 0 8px 22px rgba(39,77,53, 0.3);
+}
+
+.hero {
+    z-index: 2;
+    background-image: url(../images/hero.avif); 
+    /* extension suggests that the image file is in AVIF format, a newer image 
+    format that provides better compression than traditional formats like JPEG and 
+    PNG.The "../" portion of the path indicates that the image file is located 
+    one directory above the current directory */
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+.hero::after {
+    content: "";
+    background-color: #103129a8;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.actNow {
+    z-index: 2;
+    background-image: url(../images/actNow.avif);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.actNow::after {
+    content: "";
+    background-color: #17383da6;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 2;
+    color:var(--body);
+}
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.navbar .logo {
+    width:170px
+}
+
+.navbar .nav-link {
+    font-size: 15px;
+    font-weight:normal;
+}
+
+.btn {
+    padding: 5px 20px; /*updownPX leftrightPX*/
+    border-width: 1px;
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.801);
+}
+
+.btn-success {
+    background-color: var(--success);
+    border-color: var(--success);
+}
+
+
+h1,h2,h3,h4,h5,h6,
+.display-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--success);
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    transition: all 0.35s ease;
+    height: 240px;
+    width: 260px;
+    display: block;
+    text-decoration: none;
+}
+
+.card-effect:hover{
+    box-shadow: none;
+    transform: translateY(5px);
+
+}
+
+
+
+
+
+.iconbox img{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    font-size: 32px;
+}
+
+.footer-top {
+    padding-bottom: 30px;
+    padding: 60px;
+    background-color:var(--dark);
+}
+
+.footer-top a {
+    color: var(--body);
+}
+
+.footer-top a:hover {
+    color: white;
+}
+.footer-bottom {
+    background-color: #387c47;
+    color: #fff;
+    height:100%;
+    padding: 20%;
+}
+.social-icons {
+    direction: rtl; 
+    margin-right: 45%;
+}
+.social-icons a{
+    color: #ffffff;
+    display: inline;
+    font-size: 30px;
+}
+
