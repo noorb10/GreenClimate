@@ -3,10 +3,10 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required 
 
 from .forms import CreateUserForm
 from django.contrib import messages
-
 
 def signup_user(request):
 	form = CreateUserForm()
@@ -40,14 +40,19 @@ def login_user(request):
 	else:
 		return render(request, 'authenticate/login.html', {})
 
-
 def logout_user(request):
 	logout(request)
 	messages.success(request, ("You were logged out!"))
 	return redirect('home')
 
+@login_required(login_url='login')
 def user_page(request):
 	return render(request, 'authenticate/user.html', {})
 
+@login_required(login_url='login')
+def community(request):
+	return render(request, 'authenticate/community.html', {})
+
+@login_required(login_url='login')
 def settings(request):
 	return render(request, 'authenticate/settings.html', {})

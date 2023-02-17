@@ -71,6 +71,11 @@ body {
     font-weight:normal;
 }
 
+.hello-msg {
+    font-size: 200px;
+    margin-right: 20px; 
+}
+
 .btn {
     padding: 5px 20px; /*updownPX leftrightPX*/
     border-width: 1px;
