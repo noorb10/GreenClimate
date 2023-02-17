@@ -18,8 +18,12 @@
         </div>
         <div class="col-md-9">
             <div class="card card-body">
-                <form action="" method="POST">
-                    <input class="btn btn-success" type="submit" name="Update Information">
+
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form.as_p}}
+
+                <input class="btn btn-success" type="submit" name="Update Information">
                 </form>
             </div>
         </div>

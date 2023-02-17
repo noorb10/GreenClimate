@@ -6,9 +6,11 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required 
 from django.contrib.auth.models import Group 
 
-from .forms import CreateUserForm
+from .models import *
+from .forms import CreateUserForm, ClientForm
 from .decorators import unauthenticated_user, allowed_users
-from django.contrib import messages
+
+
 
 @unauthenticated_user
 def signup_user(request):
@@ -63,4 +65,11 @@ def community(request):
 
 @login_required(login_url='login') #Restrict access, unless authenticated! 
 def settings(request):
-	return render(request, 'authenticate/settings.html', {})
+	profile = request.user.profile
+	form = ClientForm(instance=profile)
+
+	if request.method == 'POST':
+		form = ClientForm(request.POST, request.FILES, instance=profile)
+		if form.is_valid():
+			form.save()
+	return render(request, 'authenticate/settings.html', {'form': form})

@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect
 
+
 def unauthenticated_user(view_func):
     def wrapper_func(request, *args, **kwargs):
         if request.user.is_authenticated:
@@ -23,7 +24,6 @@ def allowed_users(allowed_roles=[]):
                 html = "<h1> You are not authorized to view this page!</h1> <br> <button type=\"button\" name=\"home\"><a href=\"/home.html\">Back to the Home Page</a></button>"
                 response = HttpResponse(html, content_type="text/html")
                 return(response)
-
                 
         return wrapper_func
     return decorator
