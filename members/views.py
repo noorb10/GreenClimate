@@ -55,6 +55,10 @@ def logout_user(request):
 	return redirect('home')
 
 @login_required(login_url='login') #Restricts access, unless authenticated! 
+def donate(request):
+	return render(request, 'authenticate/donate.html', {})
+
+@login_required(login_url='login') #Restricts access, unless authenticated! 
 @allowed_users(allowed_roles=['client']) #Allows access based on groups.
 def user_page(request):
 	return render(request, 'authenticate/user.html', {})
