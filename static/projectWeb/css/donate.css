@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap'); /* Roboto Font */
+
+.payment{
+    background: #f8f8f8;
+    max-width: 330px;
+    margin: 50px auto;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+    padding: 32px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(39,77,53, 0.3);
+}
+
+.payment h1{
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 19px;
+  color: #13913d;
+}
+
+.form .label{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: start;
+    display: block;
+    color: rgb(68, 184, 39);
+    margin: auto;
+}
+
+.input{
+
+    width: 100%;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #e4e4e4;
+}
+
+.input:focus{
+    border: 1px solid rgba(100, 212, 72, 0.836);
+}
+
+.card-grp{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item{
+  width: 48%;
+}
+
+.space{
+  margin-bottom: 20px;
+}
+
+.icon-relative{
+  position: relative;
+}
+
+.icon-relative .fas,
+.icon-relative .far{
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  font-size: 20px;
+  color: #166b4a;
+}

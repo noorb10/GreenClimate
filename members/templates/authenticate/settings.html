@@ -16,15 +16,19 @@
                 <img class="profile-pic" src="{{request.user.profile.profile_pic.url}}" alt="profile picture">
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-9" style="margin: auto;">
             <div class="card card-body">
-
-                <form method="POST" action="" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{form.as_p}}
-
-                <input class="btn btn-success" type="submit" name="Update Information">
-                </form>
+                <div class="form-group">
+                    <form method="POST" action="{% url 'settings' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <!-- Name: {{form.name}} 
+                        Phone: {{form.phone}}
+                        E-mail: {{form.email}}
+                        Profile Pic: {{form.profile_pic}} -->
+                    <input class="btn btn-success" type="submit" name="Update Information">
+                    </form>
+                </div>
             </div>
         </div>
     </div>

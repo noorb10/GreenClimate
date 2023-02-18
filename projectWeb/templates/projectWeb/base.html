@@ -42,12 +42,11 @@
                 <a class="nav-link" href="{% url 'home' %}#actNow">Act Now</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}#">Donate</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}#">FAQ</a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'donate' %}">Donate</a>
+            </li>
             {% if request.user.is_staff %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
@@ -84,7 +83,7 @@
     
     {% if messages %}
         {% for message in messages %}
-            <div class="alert alert-success alert-dismissible">
+            <div class="alert alert-success alert-dismissible" style="margin: auto;">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 <strong> {{message}} </strong>
             </div>  
@@ -133,7 +132,7 @@
           <div class="container">
               <div class="row">
                   <div class="col-md-6">
-                      <p class="mb-0" style="padding-top: 10px;">© 2023 copyright all right reserved | GreenClimate </p>
+                      <p class="mb-0" style="padding-top: 10px;"> © 2023 copyright all right reserved | GreenClimate </p>
                   </div>
                   <div class="col-md-6">
                       <div class="social-icons">
