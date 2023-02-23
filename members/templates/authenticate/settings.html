@@ -22,10 +22,6 @@
                     <form method="POST" action="{% url 'settings' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{form.as_p}}
-                        <!-- Name: {{form.name}} 
-                        Phone: {{form.phone}}
-                        E-mail: {{form.email}}
-                        Profile Pic: {{form.profile_pic}} -->
                     <input class="btn btn-success" type="submit" name="Update Information">
                     </form>
                 </div>
