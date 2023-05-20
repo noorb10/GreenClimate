@@ -21,7 +21,6 @@ def signup_user(request):
 			user = form.save()
 			username = form.cleaned_data['username']
 			password = form.cleaned_data['password1']
-
 			user = authenticate(username=username, password=password)
 			login(request, user)
 
@@ -69,7 +68,7 @@ def community(request):
 
 @login_required(login_url='login') #Restrict access, unless authenticated! 
 def settings(request):
-	profile = request.user.profile
+	profile = request.user
 	form = ClientForm(instance=profile)
 
 	if request.method == 'POST':

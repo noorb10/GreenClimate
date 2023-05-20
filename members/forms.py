@@ -7,13 +7,13 @@ from .models import *
 
 class ClientForm(ModelForm):
     class Meta:
-        model = Profile
+        model = User
         fields = '__all__'
         exclude = ['user']
         widgets = {
             'name': forms.TextInput(attrs={'class':'form-control'}),
-            'phone': forms.NumberInput(attrs={'class':'form-control'}),
             'email': forms.EmailInput(attrs={'class':'form-control'}),
+            'phone': forms.TextInput(attrs={'class':'form-control'}),
             'profile-pic': forms.CheckboxInput(attrs={'class':'form-control'}),
             'change': forms.FileInput(attrs={'class':'form-control'})
         }
@@ -28,6 +28,7 @@ class CreateUserForm(UserCreationForm):
         if commit:
             user.save()
             # create a new Profile object for the new user
-            profile = Profile.objects.create(user=user, name=user.username)
+            profile = User.objects.create(user=user, name=user.username, email=user.email)
+            profile.save()
         return user
         
